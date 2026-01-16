@@ -25,7 +25,8 @@ html {
 }
 
 body {
-  font-family: var(--font-playfair-display), sans-serif;
+  font-family: var(--font-lora), sans-serif;
+  /* font-family: var(--font-playfair-display), serif; */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
