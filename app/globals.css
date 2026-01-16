@@ -5,6 +5,11 @@
 :root {
   --color-neutral-darkest: #000;
   --color-white: #fff;
+  --color-off-white: #f5f5f5;
+  --color-soft-olive: #686a47;
+  --color-deep-olive: #616253;
+  --color-accent-burgundy: #481e28;
+  --color-neutral-stone: #d5cfbf;
 }
 
 /* =====================================
@@ -20,7 +25,7 @@ html {
 }
 
 body {
-  font-family: var(--font-roboto), sans-serif;
+  font-family: var(--font-playfair-display), sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
