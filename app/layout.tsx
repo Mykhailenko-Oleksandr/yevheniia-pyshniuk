@@ -41,8 +41,11 @@ export default function RootLayout({
     <html lang="uk">
       <body className={`${playfairDisplay.variable} ${lora.variable}`}>
         <TanStackProvider>
+          {/* <Header /> */}
+
           {children}
 
+          {/* <Footer /> */}
           <Toaster />
           <ReactQueryDevtools initialIsOpen={false} />
         </TanStackProvider>

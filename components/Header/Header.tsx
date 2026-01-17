@@ -3,19 +3,8 @@
 import css from "./Header.module.css";
 import Logo from "../Logo/Logo";
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
-import { usePathname } from "next/navigation";
 
-export default function Header({ locale }: { locale: string }) {
-  const { t } = useTranslation("common");
-  const pathname = usePathname();
-
-  // Визначаємо іншу мову
-  const otherLocale = locale === "uk" ? "en" : "uk";
-
-  // Формуємо новий шлях з іншою локаллю
-  const switchPath = `/${otherLocale}${pathname.replace(/^\/[a-z]{2}/, "")}`;
-
+export default function Header() {
   return (
     <header className={css.header}>
       <div className={`container ${css.headerContainer}`}>
@@ -29,10 +18,10 @@ export default function Header({ locale }: { locale: string }) {
 
         <nav className={css.navigationBox}>
           <Link className={css.linkNav} href="/">
-            {t("Prices")}
+            {/* {t("Prices")} */}
           </Link>
           <Link className={css.linkNav} href="/">
-            {t("Project")}
+            {/* {t("Project")} */}
           </Link>
         </nav>
 
@@ -63,12 +52,12 @@ export default function Header({ locale }: { locale: string }) {
             </svg>
           </Link>
         </address>
-
+        {/* 
         <div className={css.langSwitcher}>
           <Link href={switchPath} className={css.linkNav}>
             {otherLocale.toUpperCase()}
           </Link>
-        </div>
+        </div> */}
       </div>
     </header>
   );

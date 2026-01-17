@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { i18n } from "./next-i18next.config";
 
 // const nextConfig: NextConfig = {
 //   // images: {
@@ -12,6 +11,3 @@ import { i18n } from "./next-i18next.config";
 // };
 
 // export default nextConfig;
-
-const nextConfig: NextConfig = { reactStrictMode: true, i18n };
-export default nextConfig;
