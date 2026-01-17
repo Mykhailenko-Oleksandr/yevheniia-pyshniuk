@@ -6,8 +6,6 @@ import type { Metadata } from "next";
 import { Playfair_Display, Lora } from "next/font/google";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
 
 const lora = Lora({
   subsets: ["latin", "cyrillic"],
@@ -40,14 +38,11 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="uk">
       <body className={`${playfairDisplay.variable} ${lora.variable}`}>
         <TanStackProvider>
-          <Header />
+          {children}
 
-          <main>{children}</main>
-
-          <Footer />
           <Toaster />
           <ReactQueryDevtools initialIsOpen={false} />
         </TanStackProvider>

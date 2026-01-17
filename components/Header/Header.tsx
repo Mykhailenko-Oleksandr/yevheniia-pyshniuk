@@ -1,21 +1,20 @@
-// "use client";
+"use client";
 
 import css from "./Header.module.css";
 import Logo from "../Logo/Logo";
 import Link from "next/link";
-// import { useRouter } from "next/navigation";
-// import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+import { usePathname } from "next/navigation";
 
-export default function Header() {
-  // const router = useRouter();
+export default function Header({ locale }: { locale: string }) {
+  const { t } = useTranslation("common");
+  const pathname = usePathname();
 
-  // const { locale, pathname, asPath, query } = router;
+  // Визначаємо іншу мову
+  const otherLocale = locale === "uk" ? "en" : "uk";
 
-  // const t = locale === "en" ? "Hello" : "Привіт";
-
-  // function click() {
-  //   router.push({ pathname, query }, asPath, { locale: "en" });
-  // }
+  // Формуємо новий шлях з іншою локаллю
+  const switchPath = `/${otherLocale}${pathname.replace(/^\/[a-z]{2}/, "")}`;
 
   return (
     <header className={css.header}>
@@ -30,10 +29,10 @@ export default function Header() {
 
         <nav className={css.navigationBox}>
           <Link className={css.linkNav} href="/">
-            {"t"}
+            {t("Prices")}
           </Link>
           <Link className={css.linkNav} href="/">
-            Проєкти
+            {t("Project")}
           </Link>
         </nav>
 
@@ -65,17 +64,11 @@ export default function Header() {
           </Link>
         </address>
 
-        {/* <div>
-          <button type="button" onClick={click}>
-            en
-          </button>
-        </div> */}
-        {/* <Link href="/" locale="en">
-          en
-        </Link>
-        <Link href="/" locale="uk">
-          uk
-        </Link> */}
+        <div className={css.langSwitcher}>
+          <Link href={switchPath} className={css.linkNav}>
+            {otherLocale.toUpperCase()}
+          </Link>
+        </div>
       </div>
     </header>
   );
