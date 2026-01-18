@@ -1,14 +1,19 @@
-import Link from "next/link";
+import LangBtn from "@/components/LangBtn/LangBtn";
 import css from "./Home.module.css";
-import { Locale, useTranslations } from "next-intl";
-// import { setRequestLocale } from "next-intl/server";
-// import { use } from "react";
+import { useTranslations } from "next-intl";
 
-export default function Home({ params }: PageProps<"/[locale]">) {
-  // const { locale } = use(params);
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
+
+interface HomeProps {
+  params: Promise<{ locale: string }>;
+}
+
+export default function Home({ params }: HomeProps) {
+  const { locale } = use(params);
 
   // Enable static rendering
-  // setRequestLocale(locale as Locale);
+  setRequestLocale(locale);
 
   const t = useTranslations("HomePage");
 
@@ -17,6 +22,8 @@ export default function Home({ params }: PageProps<"/[locale]">) {
       <div className="container">
         <h1>{t("title")}</h1>
       </div>
+
+      <LangBtn />
 
       {/* <Link href={switchPath}>{otherLocale.toUpperCase()}</Link> */}
     </section>
