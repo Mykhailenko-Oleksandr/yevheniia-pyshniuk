@@ -6,31 +6,32 @@ import type { Metadata } from "next";
 import { Playfair_Display, Lora } from "next/font/google";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
+import { NextIntlClientProvider } from "next-intl";
 
-const lora = Lora({
-  subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-lora",
-  display: "swap",
-});
+// const lora = Lora({
+//   subsets: ["latin", "cyrillic"],
+//   weight: ["400", "500", "600", "700"],
+//   variable: "--font-lora",
+//   display: "swap",
+// });
 
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-playfair-display",
-  display: "swap",
-});
+// const playfairDisplay = Playfair_Display({
+//   subsets: ["latin", "cyrillic"],
+//   weight: ["400", "500", "600", "700"],
+//   variable: "--font-playfair-display",
+//   display: "swap",
+// });
 
-export const metadata: Metadata = {
-  title: "",
-  description: "",
-  openGraph: {
-    title: "",
-    description: "",
-    url: "https://",
-    images: [{ url: "" }],
-  },
-};
+// export const metadata: Metadata = {
+//   title: "",
+//   description: "",
+//   openGraph: {
+//     title: "",
+//     description: "",
+//     url: "https://",
+//     images: [{ url: "" }],
+//   },
+// };
 
 export default function RootLayout({
   children,
@@ -39,16 +40,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk">
-      <body className={`${playfairDisplay.variable} ${lora.variable}`}>
-        <TanStackProvider>
-          {/* <Header /> */}
-
-          {children}
-
-          {/* <Footer /> */}
-          <Toaster />
-          <ReactQueryDevtools initialIsOpen={false} />
-        </TanStackProvider>
+      <body>
+        {/* <body className={`${playfairDisplay.variable} ${lora.variable}`}> */}
+        {/* <TanStackProvider> */}
+        {/* <Header /> */}
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        {/* <Footer /> */}
+        {/* <Toaster /> */}
+        {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+        {/* </TanStackProvider> */}
       </body>
     </html>
   );
