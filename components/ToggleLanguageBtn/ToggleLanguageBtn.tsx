@@ -14,6 +14,9 @@ export default function ToggleLanguageBtn() {
   }
 
   return (
-    <button className={css.btn} type="button" onClick={toggleLang}></button>
+    <button
+      className={css.btn}
+      type="button"
+      onClick={toggleLang}></button>
   );
 }
