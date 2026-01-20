@@ -1,0 +1,27 @@
+.list {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.item {
+}
+
+.btn {
+  display: block;
+  min-width: 90px;
+
+  border: 2px solid var(--color-text);
+  border-radius: 12px;
+
+  padding: 9px 14px;
+  text-align: center;
+  font-size: 18px;
+
+  &.register {
+    min-width: 180px;
+
+    color: var(--color-background);
+    background-color: var(--color-text);
+  }
+}

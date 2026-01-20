@@ -9,12 +9,16 @@ export default function Navigation() {
     <nav className={css.navBox}>
       <ul className={css.navList}>
         <li className={css.navItem}>
-          <Link className={css.navLink} href="/">
+          <Link
+            className={css.navLink}
+            href="/">
             {t("prices")}
           </Link>
         </li>
         <li className={css.navItem}>
-          <Link className={css.linkNav} href="/">
+          <Link
+            className={css.navLink}
+            href="/">
             {t("projects")}
           </Link>
         </li>

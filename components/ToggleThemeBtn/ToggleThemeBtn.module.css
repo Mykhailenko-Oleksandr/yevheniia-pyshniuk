@@ -1,4 +1,5 @@
 .themeBtn {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,9 +10,16 @@
   background-color: var(--color-text);
   border: none;
   border-radius: 50%;
+}
 
-  /* & svg {
-  } */
+.themeBtn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -4px;
+  width: 2px;
+  height: 100%;
+  background-color: var(--color-text);
 }
 
 .darkBtn {

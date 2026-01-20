@@ -13,7 +13,7 @@
     "prices": "Ціни",
     "projects": "Проєкти"
   },
-  "auth": {
+  "authButtons": {
     "register": "Зареєструватися",
     "login": "Увійти"
   },
