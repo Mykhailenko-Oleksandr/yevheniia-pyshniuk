@@ -16,6 +16,15 @@
   }
 }
 
+.toggleBtnBox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.authBtn {
+}
+
 @media only screen and (min-width: 480px) {
 }
 

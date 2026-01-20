@@ -6,11 +6,16 @@
     "mail": "Написати листа на електронну пошту",
     "telegram": "Написати повідомлення у Telegram",
     "whatsApp": "Написати повідомлення у WhatsApp",
-    "instagram": "Відкрити профіль в Instagram"
+    "instagram": "Відкрити профіль в Instagram",
+    "languageBtn": "Перемкнути мову на англійську"
   },
   "navigation": {
     "prices": "Ціни",
     "projects": "Проєкти"
+  },
+  "auth": {
+    "register": "Зареєструватися",
+    "login": "Увійти"
   },
   "HomePage": {
     "title": "Привіт світ!"

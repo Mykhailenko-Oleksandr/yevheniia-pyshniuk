@@ -6,11 +6,16 @@
     "mail": "Send an email",
     "telegram": "Send a message on Telegram",
     "whatsApp": "Send a message on WhatsApp",
-    "instagram": "Open the Instagram profile"
+    "instagram": "Open the Instagram profile",
+    "languageBtn": "Switch language to Ukrainian"
   },
   "navigation": {
     "prices": "Prices",
     "projects": "Projects"
+  },
+  "auth": {
+    "register": "Sign up",
+    "login": "Sign in"
   },
   "HomePage": {
     "title": "Hello world!"

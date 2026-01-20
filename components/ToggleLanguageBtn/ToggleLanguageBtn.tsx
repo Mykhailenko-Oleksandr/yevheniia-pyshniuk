@@ -2,9 +2,12 @@
 
 import css from "./ToggleLanguageBtn.module.css";
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { useLocale } from "next-intl";
+import clsx from "clsx";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function ToggleLanguageBtn() {
+  const t = useTranslations("ariaLabel");
+
   const pathname = usePathname();
   const router = useRouter();
   const currentLocale = useLocale();
@@ -15,8 +18,14 @@ export default function ToggleLanguageBtn() {
 
   return (
     <button
-      className={css.btn}
+      className={clsx(
+        css.btn,
+        currentLocale === "en" && css.enLocale,
+        currentLocale === "uk" && css.uaLocale,
+      )}
       type="button"
-      onClick={toggleLang}></button>
+      onClick={toggleLang}
+      aria-label={t("languageBtn")}
+    ></button>
   );
 }

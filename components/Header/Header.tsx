@@ -7,23 +7,42 @@ import { Link } from "@/i18n/navigation";
 import Navigation from "../Navigation/Navigation";
 import Address from "../Address/Address";
 import ToggleLanguageBtn from "../ToggleLanguageBtn/ToggleLanguageBtn";
+import ToggleThemeBtn from "../ToggleThemeBtn/ToggleThemeBtn";
 
 export default function Header() {
-  const t = useTranslations("ariaLabel");
+  const tAL = useTranslations("ariaLabel");
+  const tAuth = useTranslations("auth");
 
   return (
     <header className={css.header}>
       <div className={`container ${css.headerContainer}`}>
         <Logo />
-        <button className={css.menuBtn} type="button" aria-label={t("menuBtn")}>
+        <button
+          className={css.menuBtn}
+          type="button"
+          aria-label={tAL("menuBtn")}
+        >
           <svg width={48} height={48}>
             <use href="/icons.svg#menu"></use>
           </svg>
         </button>
+
         <Navigation />
         <Address />
 
-        <ToggleLanguageBtn />
+        <div className={css.toggleBtnBox}>
+          <ToggleThemeBtn />
+          <ToggleLanguageBtn />
+        </div>
+
+        <div className={css.authBtnBox}>
+          <Link href="/" className={css.authBtn}>
+            {tAuth("login")}
+          </Link>
+          <Link href="/" className={css.registerBtn}>
+            {tAuth("register")}
+          </Link>
+        </div>
       </div>
     </header>
   );
