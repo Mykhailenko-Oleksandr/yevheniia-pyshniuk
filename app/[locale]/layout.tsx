@@ -5,13 +5,20 @@ import { Toaster } from "react-hot-toast";
 import { notFound } from "next/navigation";
 import { ReactNode } from "react";
 import type { Metadata } from "next";
-import { Playfair_Display, Lora } from "next/font/google";
+import { Playfair_Display, Lora, Rubik } from "next/font/google";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header/Header";
+
+const rubik = Rubik({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-rubik",
+  display: "swap",
+});
 
 const lora = Lora({
   subsets: ["latin", "cyrillic"],
@@ -72,7 +79,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${playfairDisplay.variable} ${lora.variable}`}>
+      <body
+        className={`${playfairDisplay.variable} ${lora.variable} ${rubik.variable}`}
+      >
         <TanStackProvider>
           <NextIntlClientProvider>
             <Header />

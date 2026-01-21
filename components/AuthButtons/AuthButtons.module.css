@@ -9,9 +9,6 @@
   }
 }
 
-.item {
-}
-
 .btn {
   display: block;
   min-width: 90px;
@@ -19,9 +16,9 @@
   border: 2px solid var(--color-text);
   border-radius: 12px;
 
-  padding: 7px 14px;
+  padding: 5px 14px;
   text-align: center;
-  font-size: 18px;
+  font-size: 17px;
 
   &.register {
     min-width: 180px;
@@ -35,6 +32,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .list.menu {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 @media only screen and (min-width: 1024px) {

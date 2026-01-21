@@ -5,8 +5,8 @@ import css from "./BurgerMenu.module.css";
 import Navigation from "../Navigation/Navigation";
 import Address from "../Address/Address";
 import ToggleButtons from "../ToggleButtons/ToggleButtons";
-import AuthButtons from "../AuthButtons/AuthButtons";
 import { MouseEvent, useEffect, useRef } from "react";
+import AuthButtons from "../AuthButtons/AuthButtons";
 
 interface BurgerMenuProps {
   isOpen: boolean;
@@ -24,9 +24,7 @@ export default function BurgerMenu({ isOpen, closeMenu }: BurgerMenuProps) {
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth >= 1024) {
-        closeMenu();
-      }
+      if (window.innerWidth >= 1024) closeMenu();
     }
 
     window.addEventListener("resize", handleResize);
@@ -41,12 +39,14 @@ export default function BurgerMenu({ isOpen, closeMenu }: BurgerMenuProps) {
     function onEsc(e: KeyboardEvent) {
       if (e.key === "Escape") closeMenu();
     }
+
     if (isOpen) {
       document.body.classList.add("no-scroll");
       window.addEventListener("keydown", onEsc);
     } else {
       document.body.classList.remove("no-scroll");
     }
+
     return () => {
       document.body.classList.remove("no-scroll");
       window.removeEventListener("keydown", onEsc);
@@ -56,19 +56,14 @@ export default function BurgerMenu({ isOpen, closeMenu }: BurgerMenuProps) {
   return (
     <div
       ref={menuRef}
+      className={clsx(css.backdrop, isOpen && css.isOpen)}
       onClick={handleClickBackdrop}
-      className={clsx(css.backdrop, isOpen && css.isOpen)}>
+    >
       <div className={css.menu}>
-        <Navigation
-          isMenu={isOpen}
-          closeMenu={closeMenu}
-        />
+        <Navigation isMenu={isOpen} closeMenu={closeMenu} />
         <Address isMenu={isOpen} />
         <ToggleButtons isMenu={isOpen} />
-        <AuthButtons
-          isMenu={isOpen}
-          closeMenu={closeMenu}
-        />
+        <AuthButtons isMenu={isOpen} closeMenu={closeMenu} />
       </div>
     </div>
   );

@@ -45,10 +45,9 @@ export default function Header() {
           className={css.menuBtn}
           type="button"
           aria-label={t("menuBtn")}
-          onClick={openCloseMenu}>
-          <svg
-            width={44}
-            height={44}>
+          onClick={openCloseMenu}
+        >
+          <svg width={40} height={40}>
             {isMenuOpen ? (
               <use href="/icons.svg#close"></use>
             ) : (
@@ -57,10 +56,7 @@ export default function Header() {
           </svg>
         </button>
 
-        <BurgerMenu
-          isOpen={isMenuOpen}
-          closeMenu={closeMenu}
-        />
+        <BurgerMenu isOpen={isMenuOpen} closeMenu={closeMenu} />
       </div>
     </header>
   );

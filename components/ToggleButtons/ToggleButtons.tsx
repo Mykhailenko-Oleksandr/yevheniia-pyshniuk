@@ -10,8 +10,8 @@ interface ToggleButtonsProps {
 export default function ToggleButtons({ isMenu }: ToggleButtonsProps) {
   return (
     <div className={clsx(css.toggleBtnBox, isMenu && css.menu)}>
-      <ToggleThemeBtn />
-      <ToggleLanguageBtn />
+      <ToggleThemeBtn isMenu={isMenu} />
+      <ToggleLanguageBtn isMenu={isMenu} />
     </div>
   );
 }

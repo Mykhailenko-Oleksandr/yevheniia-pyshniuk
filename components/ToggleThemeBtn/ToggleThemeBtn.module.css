@@ -4,12 +4,17 @@
   align-items: center;
   justify-content: center;
 
-  width: 40px;
-  height: 40px;
+  width: 37px;
+  height: 37px;
 
   background-color: var(--color-text);
   border: none;
   border-radius: 50%;
+
+  &.menu {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .themeBtn::after {

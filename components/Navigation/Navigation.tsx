@@ -16,17 +16,19 @@ export default function Navigation({ isMenu, closeMenu }: NavigationProps) {
       <ul className={clsx(css.navList, isMenu && css.column)}>
         <li className={css.navItem}>
           <Link
+            className={clsx(css.navLink, isMenu && css.menuLink)}
+            href="/"
             onClick={closeMenu}
-            className={css.navLink}
-            href="/">
+          >
             {t("prices")}
           </Link>
         </li>
         <li className={css.navItem}>
           <Link
+            className={clsx(css.navLink, isMenu && css.menuLink)}
+            href="/"
             onClick={closeMenu}
-            className={css.navLink}
-            href="/">
+          >
             {t("projects")}
           </Link>
         </li>

@@ -4,7 +4,11 @@ import clsx from "clsx";
 import css from "./ToggleThemeBtn.module.css";
 import { useState } from "react";
 
-export default function ToggleThemeBtn() {
+interface ToggleThemeBtnProps {
+  isMenu?: boolean;
+}
+
+export default function ToggleThemeBtn({ isMenu }: ToggleThemeBtnProps) {
   const [dark, setDark] = useState(false);
 
   function toggleTheme() {
@@ -13,11 +17,11 @@ export default function ToggleThemeBtn() {
 
   return (
     <button
-      className={clsx(css.themeBtn, dark && css.darkBtn)}
+      className={clsx(css.themeBtn, dark && css.darkBtn, isMenu && css.menu)}
       type="button"
       onClick={toggleTheme}
     >
-      <svg width={20} height={20}>
+      <svg width={22} height={22}>
         {dark ? (
           <use href="/icons.svg#sunny"></use>
         ) : (
