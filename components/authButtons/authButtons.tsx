@@ -3,22 +3,22 @@ import css from "./AuthButtons.module.css";
 import { Link } from "@/i18n/navigation";
 import clsx from "clsx";
 
-export default function AuthButtons() {
+interface AuthButtonsProps {
+  isMenu?: boolean;
+}
+
+export default function AuthButtons({ isMenu }: AuthButtonsProps) {
   const t = useTranslations("authButtons");
 
   return (
-    <ul className={css.list}>
+    <ul className={clsx(css.list, isMenu && css.menu)}>
       <li className={css.item}>
-        <Link
-          href="/login"
-          className={css.btn}>
+        <Link href="/login" className={css.btn}>
           {t("login")}
         </Link>
       </li>
       <li className={css.item}>
-        <Link
-          href="/register"
-          className={clsx(css.btn, css.register)}>
+        <Link href="/register" className={clsx(css.btn, css.register)}>
           {t("register")}
         </Link>
       </li>

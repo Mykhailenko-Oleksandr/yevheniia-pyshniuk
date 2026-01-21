@@ -4,15 +4,15 @@ import { useTranslations } from "next-intl";
 import clsx from "clsx";
 
 interface NavigationProps {
-  menu?: boolean;
+  isMenu?: boolean;
 }
 
-export default function Navigation({ menu }: NavigationProps) {
+export default function Navigation({ isMenu }: NavigationProps) {
   const t = useTranslations("navigation");
 
   return (
-    <nav className={clsx(css.navBox, menu && css.visible)}>
-      <ul className={clsx(css.navList, menu && css.column)}>
+    <nav className={clsx(css.navBox, isMenu && css.visible)}>
+      <ul className={clsx(css.navList, isMenu && css.column)}>
         <li className={css.navItem}>
           <Link className={css.navLink} href="/">
             {t("prices")}

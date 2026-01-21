@@ -4,15 +4,15 @@ import { Link } from "@/i18n/navigation";
 import clsx from "clsx";
 
 interface AddressProps {
-  menu?: boolean;
+  isMenu?: boolean;
 }
 
-export default function Address({ menu }: AddressProps) {
+export default function Address({ isMenu }: AddressProps) {
   const t = useTranslations("ariaLabel");
 
   return (
-    <address className={clsx(css.addressBox, menu && css.visible)}>
-      <ul className={css.addressList}>
+    <address className={clsx(css.addressBox, isMenu && css.visible)}>
+      <ul className={clsx(css.addressList, isMenu && css.wrap)}>
         <li className={css.addressItem}>
           <Link
             className={css.addressLink}

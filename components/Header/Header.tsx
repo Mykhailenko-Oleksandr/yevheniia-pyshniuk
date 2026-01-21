@@ -10,6 +10,7 @@ import ToggleThemeBtn from "../ToggleThemeBtn/ToggleThemeBtn";
 import AuthButtons from "../AuthButtons/AuthButtons";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import { useEffect, useState } from "react";
+import ToggleButtons from "../ToggleButtons/ToggleButtons";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -82,17 +83,13 @@ export default function Header() {
 
         <BurgerMenu isOpen={isMenuOpen} />
 
-        {/* <Navigation />
-        <Address /> */}
+        <Navigation />
+        <Address />
 
-        {/* <div className={css.headerRightBox}>
-          <div className={css.toggleBtnBox}>
-            <ToggleThemeBtn />
-            <ToggleLanguageBtn />
-          </div>
-
-          <AuthButtons /> */}
-        {/* </div> */}
+        <div className={css.headerRightBox}>
+          <ToggleButtons />
+          <AuthButtons />
+        </div>
       </div>
     </header>
   );

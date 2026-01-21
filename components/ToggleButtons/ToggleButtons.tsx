@@ -1,10 +1,15 @@
 import css from "./ToggleButtons.module.css";
 import ToggleLanguageBtn from "../ToggleLanguageBtn/ToggleLanguageBtn";
 import ToggleThemeBtn from "../ToggleThemeBtn/ToggleThemeBtn";
+import clsx from "clsx";
 
-export default function ToggleButtons() {
+interface ToggleButtonsProps {
+  isMenu?: boolean;
+}
+
+export default function ToggleButtons({ isMenu }: ToggleButtonsProps) {
   return (
-    <div className={css.toggleBtnBox}>
+    <div className={clsx(css.toggleBtnBox, isMenu && css.menu)}>
       <ToggleThemeBtn />
       <ToggleLanguageBtn />
     </div>

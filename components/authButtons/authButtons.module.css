@@ -1,7 +1,12 @@
 .list {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
+
+  &.menu {
+    flex-wrap: wrap;
+  }
 }
 
 .item {

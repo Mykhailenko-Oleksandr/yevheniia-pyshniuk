@@ -10,7 +10,12 @@
 .addressList {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
 }
 
 .addressLink {
