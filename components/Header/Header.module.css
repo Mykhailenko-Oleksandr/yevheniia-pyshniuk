@@ -17,6 +17,16 @@
 
   & svg {
     fill: var(--color-text);
+    transition: fill 300ms ease;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: var(--color-button-hover);
+  }
+
+  &:active svg {
+    fill: var(--color-text);
   }
 }
 
