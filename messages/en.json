@@ -17,6 +17,11 @@
     "register": "Register",
     "login": "Log in"
   },
+  "pricesHero": {
+    "titleTop": "Service ",
+    "titleBottom": "prices"
+  },
+
   "HomePage": {
     "title": "Hello world!"
   }

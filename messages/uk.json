@@ -17,6 +17,11 @@
     "register": "Зареєструватися",
     "login": "Увійти"
   },
+  "pricesHero": {
+    "titleTop": "Ціни на ",
+    "titleBottom": "послуги"
+  },
+
   "HomePage": {
     "title": "Привіт світ!"
   }
