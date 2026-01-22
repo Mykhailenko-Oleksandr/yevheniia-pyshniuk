@@ -18,6 +18,15 @@
   text-align: center;
   font-size: 36px;
   line-height: 100%;
+
+  text-shadow:
+    -20px -20px 20px white,
+    20px -20px 20px white,
+    20px 20px 20px white,
+    -20px 20px 20px white,
+    0px 20px 20px white,
+    0px -21px 20px white,
+    0px -21px 20px white;
 }
 
 @media only screen and (min-width: 375px) {
