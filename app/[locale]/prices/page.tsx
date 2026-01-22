@@ -1,3 +1,11 @@
+import css from "./Prices.module.css";
+
 export default function Prices() {
-  return <h2>Prices page</h2>;
+  return (
+    <section className={css.heroPrice}>
+      <div className={"container"}>
+        <h1 className={css.heroTitle}>ЦІНИ на ПОСЛУГИ</h1>
+      </div>
+    </section>
+  );
 }

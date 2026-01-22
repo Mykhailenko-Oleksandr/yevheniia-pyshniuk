@@ -1,0 +1,70 @@
+.heroPrice {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  min-height: 350px;
+
+  background-image: url("/images/prices/heroPrice.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.heroTitle {
+  font-family: var(--font-playfair-display);
+
+  display: inline-block;
+  max-width: 300px;
+
+  text-align: center;
+  font-size: 36px;
+  line-height: 100%;
+}
+
+@media only screen and (min-width: 375px) {
+  .heroPrice {
+    min-height: 400px;
+  }
+
+  .heroTitle {
+    text-align: left;
+    font-size: 48px;
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .heroPrice {
+    background-position: bottom;
+    background-image: url("/images/prices/heroPriceTab.webp");
+  }
+
+  .heroTitle {
+    margin-left: 80px;
+    font-size: 52px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .heroPrice {
+    min-height: 500px;
+    padding-top: 150px;
+  }
+
+  .heroTitle {
+    margin-left: 150px;
+    font-size: 58px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .heroPrice {
+    min-height: 600px;
+  }
+
+  .heroTitle {
+    max-width: unset;
+    text-align: center;
+    margin-left: unset;
+    font-size: 72px;
+  }
+}
