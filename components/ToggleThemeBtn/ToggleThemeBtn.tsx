@@ -17,11 +17,12 @@ export default function ToggleThemeBtn({ isMenu }: ToggleThemeBtnProps) {
 
   return (
     <button
-      className={clsx(css.themeBtn, dark && css.darkBtn, isMenu && css.menu)}
+      className={clsx(css.themeBtn, dark && css.darkBtn, isMenu && css.menuBtn)}
       type="button"
-      onClick={toggleTheme}
-    >
-      <svg width={22} height={22}>
+      onClick={toggleTheme}>
+      <svg
+        width={22}
+        height={22}>
         {dark ? (
           <use href="/icons.svg#sunny"></use>
         ) : (

@@ -34,12 +34,19 @@
   &:hover,
   &:focus {
     color: var(--color-button-hover);
+
+    &::after {
+      transform: scaleX(1);
+      background-color: var(--color-button-hover);
+    }
   }
 
-  &:hover::after,
-  &:focus::after {
-    transform: scaleX(1);
-    background-color: var(--color-button-hover);
+  &:active {
+    color: var(--color-text);
+
+    &::after {
+      background-color: var(--color-text);
+    }
   }
 }
 

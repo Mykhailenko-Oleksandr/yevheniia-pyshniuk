@@ -26,11 +26,10 @@ export default function ToggleLanguageBtn({ isMenu }: ToggleLanguageBtnProps) {
         css.btn,
         currentLocale === "en" && css.enLocale,
         currentLocale === "uk" && css.uaLocale,
-        isMenu && css.menu,
+        isMenu && css.menuBtn,
       )}
       type="button"
       onClick={toggleLang}
-      aria-label={t("languageBtn")}
-    ></button>
+      aria-label={t("languageBtn")}></button>
   );
 }

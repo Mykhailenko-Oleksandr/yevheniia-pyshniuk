@@ -15,65 +15,70 @@ export default function Address({ isMenu }: AddressProps) {
       <ul className={clsx(css.addressList, isMenu && css.wrap)}>
         <li className={css.addressItem}>
           <Link
-            className={clsx(css.addressLink, isMenu && css.menu)}
+            className={clsx(css.addressLink, isMenu && css.menuLink)}
             href="tel:+380677702712"
             aria-label={t("phone")}
             target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg width={22} height={22}>
+            rel="noopener noreferrer">
+            <svg
+              width={22}
+              height={22}>
               <use href="/icons.svg#phone"></use>
             </svg>
           </Link>
         </li>
         <li className={css.addressItem}>
           <Link
-            className={clsx(css.addressLink, isMenu && css.menu)}
+            className={clsx(css.addressLink, isMenu && css.menuLink)}
             href="mailto:genur31@gmail.com"
             aria-label={t("mail")}
             target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg width={22} height={22}>
+            rel="noopener noreferrer">
+            <svg
+              width={22}
+              height={22}>
               <use href="/icons.svg#mail"></use>
             </svg>
           </Link>
         </li>
         <li className={css.addressItem}>
           <Link
-            className={clsx(css.addressLink, isMenu && css.menu)}
+            className={clsx(css.addressLink, isMenu && css.menuLink)}
             href="https://t.me/Gennur31"
             aria-label={t("telegram")}
             target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg width={22} height={22}>
+            rel="noopener noreferrer">
+            <svg
+              width={22}
+              height={22}>
               <use href="/icons.svg#telegram"></use>
             </svg>
           </Link>
         </li>
         <li className={css.addressItem}>
           <Link
-            className={clsx(css.addressLink, isMenu && css.menu)}
+            className={clsx(css.addressLink, isMenu && css.menuLink)}
             href="https://wa.me/380677702712"
             aria-label={t("whatsApp")}
             target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg width={22} height={22}>
+            rel="noopener noreferrer">
+            <svg
+              width={22}
+              height={22}>
               <use href="/icons.svg#whatsapp"></use>
             </svg>
           </Link>
         </li>
         <li className={css.addressItem}>
           <Link
-            className={clsx(css.addressLink, isMenu && css.menu)}
+            className={clsx(css.addressLink, isMenu && css.menuLink)}
             href="https://instagram.com/evheniia_pyshniuk"
             aria-label={t("instagram")}
             target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg width={22} height={22}>
+            rel="noopener noreferrer">
+            <svg
+              width={22}
+              height={22}>
               <use href="/icons.svg#instagram"></use>
             </svg>
           </Link>

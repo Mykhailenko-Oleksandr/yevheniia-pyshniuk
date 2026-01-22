@@ -4,7 +4,7 @@
   justify-content: center;
   gap: 5px;
 
-  &.menu {
+  &.menuList {
     flex-wrap: wrap;
   }
 }
@@ -20,11 +20,36 @@
   text-align: center;
   font-size: 17px;
 
+  transition:
+    border-color 300ms ease,
+    color 300ms ease,
+    background-color 300ms ease;
+
   &.register {
     min-width: 180px;
 
     color: var(--color-background);
     background-color: var(--color-text);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-button-hover);
+    color: var(--color-button-hover);
+
+    &.register {
+      background-color: var(--color-background);
+    }
+  }
+
+  &:active {
+    border-color: var(--color-text);
+    color: var(--color-text);
+
+    &.register {
+      color: var(--color-background);
+      background-color: var(--color-text);
+    }
   }
 }
 
@@ -32,7 +57,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .list.menu {
+  .list.menuList {
     flex-direction: column;
     gap: 10px;
   }

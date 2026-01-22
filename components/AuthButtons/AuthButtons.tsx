@@ -14,7 +14,7 @@ export default function AuthButtons({ isMenu, closeMenu }: AuthButtonsProps) {
   const t = useTranslations("authButtons");
 
   return (
-    <ul className={clsx(css.list, isMenu && css.menu)}>
+    <ul className={clsx(css.list, isMenu && css.menuList)}>
       <li className={css.item}>
         <Link
           href="/login"

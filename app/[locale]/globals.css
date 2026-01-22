@@ -17,6 +17,7 @@
   --color-border: var(--color-accent-burgundy);
   --color-button: var(--color-accent-burgundy);
   --color-button-hover: var(--color-dark-olive);
+  --color-icon: var(--color-white);
 }
 
 /* =====================================
