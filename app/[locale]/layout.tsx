@@ -12,6 +12,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header/Header";
+import ThemeInit from "@/components/ThemeInit/ThemeInit";
 
 const rubik = Rubik({
   subsets: ["latin", "cyrillic"],
@@ -80,9 +81,9 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${playfairDisplay.variable} ${lora.variable} ${rubik.variable}`}
-      >
+        className={`${playfairDisplay.variable} ${lora.variable} ${rubik.variable}`}>
         <TanStackProvider>
+          <ThemeInit />
           <NextIntlClientProvider>
             <Header />
             {children}

@@ -50,6 +50,15 @@
   }
 }
 
+.navLink.current {
+  color: var(--color-button-hover);
+
+  &::after {
+    transform: scaleX(1);
+    background-color: var(--color-button-hover);
+  }
+}
+
 .navLink::after {
   content: "";
   position: absolute;

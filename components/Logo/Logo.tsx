@@ -1,5 +1,3 @@
-"use client";
-
 import { Link } from "@/i18n/navigation";
 import css from "./Logo.module.css";
 import { useTranslations } from "next-intl";

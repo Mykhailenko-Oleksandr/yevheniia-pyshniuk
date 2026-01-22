@@ -28,10 +28,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: var(--font-rubik), sans-serif;
   /* font-family: var(--font-playfair-display), serif; */
@@ -171,4 +167,17 @@ textarea:-webkit-autofill:focus {
     max-width: 1440px;
     padding: 0 64px;
   }
+}
+
+/* =====================================
+============= Dark Theme ===============
+======================================== */
+
+body.dark {
+  --color-text: var(--color-off-white);
+  --color-background: var(--color-accent-burgundy);
+  --color-border: var(--color-off-white);
+  --color-button: var(--color-off-white);
+  --color-button-hover: var(--color-dark-olive);
+  --color-icon: var(--color-accent-burgundy);
 }
