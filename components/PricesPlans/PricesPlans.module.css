@@ -1,0 +1,60 @@
+.pricesPlans {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.list {
+}
+
+.item {
+}
+
+.image {
+}
+
+.contentBox {
+}
+
+.contentTitle {
+}
+
+.contentList {
+}
+
+.contentItem {
+}
+
+.text {
+}
+
+.contentListSecond {
+}
+
+.listSecondItem {
+}
+
+.bottomBox {
+}
+
+.bottomTextBox {
+}
+
+.bottomBoxTextTop {
+}
+
+.bottomBoxTextBottom {
+}
+
+@media only screen and (min-width: 480px) {
+  .pricesPlans {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .pricesPlans {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
