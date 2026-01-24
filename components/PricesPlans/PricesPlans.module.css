@@ -7,6 +7,8 @@
 }
 
 .item {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .image {
@@ -94,6 +96,7 @@
 
   .contentBox {
     padding: 30px 40px;
+    /* max-width: 330px; */
   }
 
   .contentTitle {
@@ -105,11 +108,17 @@
     font-size: 18px;
   }
 
+  .contentList {
+    max-width: 330px;
+    margin: 0 auto;
+  }
+
   .contentItem:last-of-type {
     margin-bottom: 15px;
   }
 
   .bottomBox {
+    justify-content: space-around;
     font-size: 18px;
   }
 }
@@ -118,5 +127,17 @@
   .pricesPlans {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    flex-basis: calc((100% - 25px) / 2);
   }
 }
