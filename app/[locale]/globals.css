@@ -181,4 +181,5 @@ body.dark {
   --color-button: var(--color-off-white);
   --color-button-hover: var(--color-dark-olive);
   --color-icon: var(--color-accent-burgundy);
+  --color-background-card: var(--color-off-white);
 }

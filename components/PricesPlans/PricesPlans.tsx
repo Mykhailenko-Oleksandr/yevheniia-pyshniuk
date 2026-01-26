@@ -15,44 +15,46 @@ export default function PricesPlans() {
               height={200}
             />
             <div className={css.contentBox}>
-              <h2 className={css.contentTitle}>
-                Базовий <span>(Технічний проект)</span>
-              </h2>
-              <ul className={css.contentList}>
-                <li className={css.contentItem}>
-                  <p className={css.text}>- Обмір</p>
-                </li>
-                <li className={css.contentItem}>
-                  <p className={css.text}>
-                    - Розробка 3-х варіантів планування
-                  </p>
-                </li>
-                <li className={css.contentItem}>
-                  <p className={`${css.text} ${css.packageTitle}`}>
-                    - Пакет професійних креслень:
-                  </p>
-                  <ul className={css.contentListSecond}>
-                    <li className={css.listSecondItem}>
-                      <p className={css.text}>Обмірний план</p>
-                    </li>
-                    <li className={css.listSecondItem}>
-                      <p className={css.text}>План демонтажу, монтажу</p>
-                    </li>
-                    <li className={css.listSecondItem}>
-                      <p className={css.text}>План розміщення меблів</p>
-                    </li>
-                    <li className={css.listSecondItem}>
-                      <p className={css.text}>План сантехнічних виводів</p>
-                    </li>
-                    <li className={css.listSecondItem}>
-                      <p className={css.text}>План освітлення</p>
-                    </li>
-                    <li className={css.listSecondItem}>
-                      <p className={css.text}>План теплоі підлоги</p>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+              <div>
+                <h2 className={css.contentTitle}>
+                  Базовий <span>(Технічний проект)</span>
+                </h2>
+                <ul className={css.contentList}>
+                  <li className={css.contentItem}>
+                    <p className={css.text}>- Обмір</p>
+                  </li>
+                  <li className={css.contentItem}>
+                    <p className={css.text}>
+                      - Розробка 3-х варіантів планування
+                    </p>
+                  </li>
+                  <li className={css.contentItem}>
+                    <p className={`${css.text} ${css.packageTitle}`}>
+                      - Пакет професійних креслень:
+                    </p>
+                    <ul className={css.contentListSecond}>
+                      <li className={css.listSecondItem}>
+                        <p className={css.text}>Обмірний план</p>
+                      </li>
+                      <li className={css.listSecondItem}>
+                        <p className={css.text}>План демонтажу, монтажу</p>
+                      </li>
+                      <li className={css.listSecondItem}>
+                        <p className={css.text}>План розміщення меблів</p>
+                      </li>
+                      <li className={css.listSecondItem}>
+                        <p className={css.text}>План сантехнічних виводів</p>
+                      </li>
+                      <li className={css.listSecondItem}>
+                        <p className={css.text}>План освітлення</p>
+                      </li>
+                      <li className={css.listSecondItem}>
+                        <p className={css.text}>План теплоі підлоги</p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
               <div className={css.bottomBox}>
                 <div className={css.bottomTextBox}>
                   <p className={css.bottomBoxTextTop}>Термін виконання:</p>
@@ -74,33 +76,35 @@ export default function PricesPlans() {
               height={200}
             />
             <div className={css.contentBox}>
-              <h2 className={css.contentTitle}>Оптимальний пакет</h2>
-              <ul className={css.contentList}>
-                <li className={css.contentItem}>
-                  <p className={css.text}>- Обмір</p>
-                </li>
-                <li className={css.contentItem}>
-                  <p className={css.text}>
-                    - Розробка 3-х варіантів планування
-                  </p>
-                </li>
-                <li className={css.contentItem}>
-                  <p className={`${css.text} ${css.packageTitle}`}>
-                    - Пакет професійних креслень
-                  </p>
-                </li>
-                <li className={css.contentItem}>
-                  <p className={css.text}>
-                    - Специфікація оздоблювальних матеріалів та предметів
-                    інтер'єру
-                  </p>
-                </li>
-                <li className={css.contentItem}>
-                  <p className={css.text}>
-                    - Колажі з дизайн-концепцією для кожного приміщення
-                  </p>
-                </li>
-              </ul>
+              <div>
+                <h2 className={css.contentTitle}>Оптимальний пакет</h2>
+                <ul className={css.contentList}>
+                  <li className={css.contentItem}>
+                    <p className={css.text}>- Обмір</p>
+                  </li>
+                  <li className={css.contentItem}>
+                    <p className={css.text}>
+                      - Розробка 3-х варіантів планування
+                    </p>
+                  </li>
+                  <li className={css.contentItem}>
+                    <p className={`${css.text} ${css.packageTitle}`}>
+                      - Пакет професійних креслень
+                    </p>
+                  </li>
+                  <li className={css.contentItem}>
+                    <p className={css.text}>
+                      - Специфікація оздоблювальних матеріалів та предметів
+                      інтер'єру
+                    </p>
+                  </li>
+                  <li className={css.contentItem}>
+                    <p className={css.text}>
+                      - Колажі з дизайн-концепцією для кожного приміщення
+                    </p>
+                  </li>
+                </ul>
+              </div>
               <div className={css.bottomBox}>
                 <div className={css.bottomTextBox}>
                   <p className={css.bottomBoxTextTop}>Термін виконання:</p>
@@ -122,38 +126,40 @@ export default function PricesPlans() {
               height={200}
             />
             <div className={css.contentBox}>
-              <h2 className={css.contentTitle}>Повний комплекс</h2>
-              <ul className={css.contentList}>
-                <li className={css.contentItem}>
-                  <p className={css.text}>- Обмір</p>
-                </li>
-                <li className={css.contentItem}>
-                  <p className={css.text}>
-                    - Розробка 3-х варіантів планування
-                  </p>
-                </li>
-                <li className={css.contentItem}>
-                  <p className={`${css.text} ${css.packageTitle}`}>
-                    - Пакет професійних креслень
-                  </p>
-                </li>
-                <li className={css.contentItem}>
-                  <p className={css.text}>
-                    - Специфікація оздоблювальних матеріалів та предметів
-                    інтер'єру
-                  </p>
-                </li>
-                <li className={css.contentItem}>
-                  <p className={css.text}>
-                    - 3D-візуалізації кожного приміщення
-                  </p>
-                </li>
-                <li className={css.contentItem}>
-                  <p className={css.text}>
-                    - Альбом креслень (у друкованому та електронному форматах)
-                  </p>
-                </li>
-              </ul>
+              <div>
+                <h2 className={css.contentTitle}>Повний комплекс</h2>
+                <ul className={css.contentList}>
+                  <li className={css.contentItem}>
+                    <p className={css.text}>- Обмір</p>
+                  </li>
+                  <li className={css.contentItem}>
+                    <p className={css.text}>
+                      - Розробка 3-х варіантів планування
+                    </p>
+                  </li>
+                  <li className={css.contentItem}>
+                    <p className={`${css.text} ${css.packageTitle}`}>
+                      - Пакет професійних креслень
+                    </p>
+                  </li>
+                  <li className={css.contentItem}>
+                    <p className={css.text}>
+                      - Специфікація оздоблювальних матеріалів та предметів
+                      інтер'єру
+                    </p>
+                  </li>
+                  <li className={css.contentItem}>
+                    <p className={css.text}>
+                      - 3D-візуалізації кожного приміщення
+                    </p>
+                  </li>
+                  <li className={css.contentItem}>
+                    <p className={css.text}>
+                      - Альбом креслень (у друкованому та електронному форматах)
+                    </p>
+                  </li>
+                </ul>
+              </div>
               <div className={css.bottomBox}>
                 <div className={css.bottomTextBox}>
                   <p className={css.bottomBoxTextTop}>Термін виконання:</p>
