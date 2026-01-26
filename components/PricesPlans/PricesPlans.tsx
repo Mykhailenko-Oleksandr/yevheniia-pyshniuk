@@ -1,7 +1,12 @@
-import Image from "next/image";
 import css from "./PricesPlans.module.css";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function PricesPlans() {
+  const tBasic = useTranslations("pricesPlans.basic");
+  const tOptimal = useTranslations("pricesPlans.optimal");
+  const tFull = useTranslations("pricesPlans.full");
+
   return (
     <section className={css.pricesPlans}>
       <div className="container">
@@ -10,46 +15,44 @@ export default function PricesPlans() {
             <Image
               className={css.image}
               src="/images/prices/heroPriceTab.webp"
-              alt="Сучасна вітальня з сірою софою, круглими столиками та обідньою зоною в мінімалістичному стилі"
+              alt={tBasic("image")}
               width={300}
               height={200}
             />
             <div className={css.contentBox}>
               <div>
                 <h2 className={css.contentTitle}>
-                  Базовий <span>(Технічний проект)</span>
+                  {tBasic("title.0")} <span>({tBasic("title.1")})</span>
                 </h2>
                 <ul className={css.contentList}>
                   <li className={css.contentItem}>
-                    <p className={css.text}>- Обмір</p>
+                    <p className={css.text}>- {tBasic("features.0")}</p>
                   </li>
                   <li className={css.contentItem}>
-                    <p className={css.text}>
-                      - Розробка 3-х варіантів планування
-                    </p>
+                    <p className={css.text}>- {tBasic("features.1")}</p>
                   </li>
                   <li className={css.contentItem}>
                     <p className={`${css.text} ${css.packageTitle}`}>
-                      - Пакет професійних креслень:
+                      - {tBasic("features.2")}:
                     </p>
                     <ul className={css.contentListSecond}>
                       <li className={css.listSecondItem}>
-                        <p className={css.text}>Обмірний план</p>
+                        <p className={css.text}>{tBasic("subFeatures.0")}</p>
                       </li>
                       <li className={css.listSecondItem}>
-                        <p className={css.text}>План демонтажу, монтажу</p>
+                        <p className={css.text}>{tBasic("subFeatures.1")}</p>
                       </li>
                       <li className={css.listSecondItem}>
-                        <p className={css.text}>План розміщення меблів</p>
+                        <p className={css.text}>{tBasic("subFeatures.2")}</p>
                       </li>
                       <li className={css.listSecondItem}>
-                        <p className={css.text}>План сантехнічних виводів</p>
+                        <p className={css.text}>{tBasic("subFeatures.3")}</p>
                       </li>
                       <li className={css.listSecondItem}>
-                        <p className={css.text}>План освітлення</p>
+                        <p className={css.text}>{tBasic("subFeatures.4")}</p>
                       </li>
                       <li className={css.listSecondItem}>
-                        <p className={css.text}>План теплоі підлоги</p>
+                        <p className={css.text}>{tBasic("subFeatures.5")}</p>
                       </li>
                     </ul>
                   </li>
@@ -57,62 +60,16 @@ export default function PricesPlans() {
               </div>
               <div className={css.bottomBox}>
                 <div className={css.bottomTextBox}>
-                  <p className={css.bottomBoxTextTop}>Термін виконання:</p>
-                  <p className={css.bottomBoxTextBottom}>1 місяць</p>
+                  <p className={css.bottomBoxTextTop}>
+                    {tBasic("duration.0")}:
+                  </p>
+                  <p className={css.bottomBoxTextBottom}>
+                    {tBasic("duration.1")}
+                  </p>
                 </div>
                 <div className={css.bottomTextBox}>
-                  <p className={css.bottomBoxTextTop}>Вартість:</p>
-                  <p className={css.bottomBoxTextBottom}>5$ /м2</p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li className={css.item}>
-            <Image
-              className={css.image}
-              src="/images/prices/heroPriceTab.webp"
-              alt="Сучасна вітальня з сірою софою, круглими столиками та обідньою зоною в мінімалістичному стилі"
-              width={300}
-              height={200}
-            />
-            <div className={css.contentBox}>
-              <div>
-                <h2 className={css.contentTitle}>Оптимальний пакет</h2>
-                <ul className={css.contentList}>
-                  <li className={css.contentItem}>
-                    <p className={css.text}>- Обмір</p>
-                  </li>
-                  <li className={css.contentItem}>
-                    <p className={css.text}>
-                      - Розробка 3-х варіантів планування
-                    </p>
-                  </li>
-                  <li className={css.contentItem}>
-                    <p className={`${css.text} ${css.packageTitle}`}>
-                      - Пакет професійних креслень
-                    </p>
-                  </li>
-                  <li className={css.contentItem}>
-                    <p className={css.text}>
-                      - Специфікація оздоблювальних матеріалів та предметів
-                      інтер'єру
-                    </p>
-                  </li>
-                  <li className={css.contentItem}>
-                    <p className={css.text}>
-                      - Колажі з дизайн-концепцією для кожного приміщення
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div className={css.bottomBox}>
-                <div className={css.bottomTextBox}>
-                  <p className={css.bottomBoxTextTop}>Термін виконання:</p>
-                  <p className={css.bottomBoxTextBottom}>2-2.5 міс</p>
-                </div>
-                <div className={css.bottomTextBox}>
-                  <p className={css.bottomBoxTextTop}>Вартість:</p>
-                  <p className={css.bottomBoxTextBottom}>10$ /м2</p>
+                  <p className={css.bottomBoxTextTop}>{tBasic("price.0")}:</p>
+                  <p className={css.bottomBoxTextBottom}>{tBasic("price.1")}</p>
                 </div>
               </div>
             </div>
@@ -121,53 +78,95 @@ export default function PricesPlans() {
             <Image
               className={css.image}
               src="/images/prices/heroPriceTab.webp"
-              alt="Сучасна вітальня з сірою софою, круглими столиками та обідньою зоною в мінімалістичному стилі"
+              alt={tOptimal("image")}
               width={300}
               height={200}
             />
             <div className={css.contentBox}>
               <div>
-                <h2 className={css.contentTitle}>Повний комплекс</h2>
+                <h2 className={css.contentTitle}>{tOptimal("title")}</h2>
                 <ul className={css.contentList}>
                   <li className={css.contentItem}>
-                    <p className={css.text}>- Обмір</p>
+                    <p className={css.text}>- {tOptimal("features.0")}</p>
                   </li>
                   <li className={css.contentItem}>
-                    <p className={css.text}>
-                      - Розробка 3-х варіантів планування
-                    </p>
+                    <p className={css.text}>- {tOptimal("features.1")}</p>
                   </li>
                   <li className={css.contentItem}>
                     <p className={`${css.text} ${css.packageTitle}`}>
-                      - Пакет професійних креслень
+                      - {tOptimal("features.2")}
                     </p>
                   </li>
                   <li className={css.contentItem}>
-                    <p className={css.text}>
-                      - Специфікація оздоблювальних матеріалів та предметів
-                      інтер'єру
-                    </p>
+                    <p className={css.text}>- {tOptimal("features.3")}</p>
                   </li>
                   <li className={css.contentItem}>
-                    <p className={css.text}>
-                      - 3D-візуалізації кожного приміщення
-                    </p>
-                  </li>
-                  <li className={css.contentItem}>
-                    <p className={css.text}>
-                      - Альбом креслень (у друкованому та електронному форматах)
-                    </p>
+                    <p className={css.text}>- {tOptimal("features.4")}</p>
                   </li>
                 </ul>
               </div>
               <div className={css.bottomBox}>
                 <div className={css.bottomTextBox}>
-                  <p className={css.bottomBoxTextTop}>Термін виконання:</p>
-                  <p className={css.bottomBoxTextBottom}>3.5-4 міс</p>
+                  <p className={css.bottomBoxTextTop}>
+                    {tOptimal("duration.0")}:
+                  </p>
+                  <p className={css.bottomBoxTextBottom}>
+                    {tOptimal("duration.1")}
+                  </p>
                 </div>
                 <div className={css.bottomTextBox}>
-                  <p className={css.bottomBoxTextTop}>Вартість:</p>
-                  <p className={css.bottomBoxTextBottom}>17$ /м2</p>
+                  <p className={css.bottomBoxTextTop}>{tOptimal("price.0")}:</p>
+                  <p className={css.bottomBoxTextBottom}>
+                    {tOptimal("price.1")}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li className={css.item}>
+            <Image
+              className={css.image}
+              src="/images/prices/heroPriceTab.webp"
+              alt={tFull("image")}
+              width={300}
+              height={200}
+            />
+            <div className={css.contentBox}>
+              <div>
+                <h2 className={css.contentTitle}>{tFull("title")}</h2>
+                <ul className={css.contentList}>
+                  <li className={css.contentItem}>
+                    <p className={css.text}>- {tFull("features.0")}</p>
+                  </li>
+                  <li className={css.contentItem}>
+                    <p className={css.text}>- {tFull("features.1")}</p>
+                  </li>
+                  <li className={css.contentItem}>
+                    <p className={`${css.text} ${css.packageTitle}`}>
+                      - {tFull("features.2")}
+                    </p>
+                  </li>
+                  <li className={css.contentItem}>
+                    <p className={css.text}>- {tFull("features.3")}</p>
+                  </li>
+                  <li className={css.contentItem}>
+                    <p className={css.text}>- {tFull("features.4")}</p>
+                  </li>
+                  <li className={css.contentItem}>
+                    <p className={css.text}>- {tFull("features.5")}</p>
+                  </li>
+                </ul>
+              </div>
+              <div className={css.bottomBox}>
+                <div className={css.bottomTextBox}>
+                  <p className={css.bottomBoxTextTop}>{tFull("duration.0")}:</p>
+                  <p className={css.bottomBoxTextBottom}>
+                    {tFull("duration.1")}
+                  </p>
+                </div>
+                <div className={css.bottomTextBox}>
+                  <p className={css.bottomBoxTextTop}>{tFull("price.0")}:</p>
+                  <p className={css.bottomBoxTextBottom}>{tFull("price.1")}</p>
                 </div>
               </div>
             </div>

@@ -21,6 +21,54 @@
     "titleTop": "Service ",
     "titleBottom": "prices"
   },
+  "pricesPlans": {
+    "basic": {
+      "image": "",
+      "title": ["Basic", "Technical project"],
+      "features": [
+        "Measurement",
+        "Development of 3 layout options",
+        "Package of professional drawings"
+      ],
+      "subFeatures": [
+        "Measurement plan",
+        "Demolition and installation plan",
+        "Furniture layout plan",
+        "Plumbing outlets plan",
+        "Lighting plan",
+        "Underfloor heating plan"
+      ],
+      "duration": ["Execution time", "1 month"],
+      "price": ["Cost", "5$ /m2"]
+    },
+    "optimal": {
+      "image": "",
+      "title": "Optimal Package",
+      "features": [
+        "Measurement",
+        "Development of 3 layout options",
+        "Package of professional drawings",
+        "Specification of finishing materials and interior items",
+        "Collages with design concept for each room"
+      ],
+      "duration": ["Execution time", "2-2.5 months"],
+      "price": ["Cost", "10$ /m2"]
+    },
+    "full": {
+      "image": "",
+      "title": "Full Complex",
+      "features": [
+        "Measurement",
+        "Development of 3 layout options",
+        "Package of professional drawings",
+        "Specification of finishing materials and interior items",
+        "3D visualizations of each room",
+        "Drawing album (in printed and electronic formats)"
+      ],
+      "duration": ["Execution time", "3.5-4 months"],
+      "price": ["Cost", "17$ /m2"]
+    }
+  },
 
   "HomePage": {
     "title": "Hello world!"
