@@ -9,9 +9,12 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import { useState } from "react";
 import ToggleButtons from "../ToggleButtons/ToggleButtons";
 import AuthButtons from "../AuthButtons/AuthButtons";
+import { useAuthStore } from "@/lib/store/authStore";
+import UserHeader from "../UserHeader/UserHeader";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user } = useAuthStore();
 
   const t = useTranslations("ariaLabel");
 
@@ -32,6 +35,7 @@ export default function Header() {
   function closeMenu() {
     setIsMenuOpen(false);
   }
+  console.log(user);
 
   return (
     <header className={css.header}>
@@ -43,7 +47,12 @@ export default function Header() {
 
         <div className={css.headerRightBox}>
           <ToggleButtons />
-          <AuthButtons closeMenu={closeMenu} />
+
+          {user ? (
+            <UserHeader user={user} />
+          ) : (
+            <AuthButtons closeMenu={closeMenu} />
+          )}
         </div>
 
         <button
