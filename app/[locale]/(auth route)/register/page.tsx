@@ -1,14 +1,14 @@
 "use client";
 
-import { register } from "@/lib/api/clientApi";
 import css from "./Register.module.css";
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import * as Yup from "yup";
-import { useAuthStore } from "@/lib/store/authStore";
-import { ApiError } from "@/app/api/api";
 import toast from "react-hot-toast";
-import { Link, useRouter } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import { register } from "@/lib/api/clientApi";
+import { useAuthStore } from "@/lib/store/authStore";
+import { Link, useRouter } from "@/i18n/navigation";
+import { ApiError } from "@/app/api/api";
 
 interface FormData {
   firstName: string;
@@ -47,13 +47,13 @@ const createRegistrationFormSchema = (t: (key: string) => string) =>
 
 export default function Register() {
   const router = useRouter();
-  const { setUser } = useAuthStore();
+  const setUser = useAuthStore((state) => state.setUser);
   const t = useTranslations("registerPage");
 
-  const handleSubmit = async (
+  async function handleSubmit(
     values: FormData,
     formikHelpers: FormikHelpers<FormData>,
-  ) => {
+  ) {
     try {
       const newUser = await register({
         firstName: values.firstName,
@@ -83,7 +83,7 @@ export default function Register() {
         );
       }
     }
-  };
+  }
 
   return (
     <>

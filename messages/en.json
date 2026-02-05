@@ -24,7 +24,7 @@
 
   "authButtons": {
     "register": "Register",
-    "login": "Log in"
+    "login": "Login"
   },
 
   "registerPage": {
@@ -69,6 +69,31 @@
     "toastEmailUse": "This email address is already in use",
     "textBottom": "Already have an account?",
     "linkBottom": "Login"
+  },
+
+  "loginPage": {
+    "validation": {
+      "email": {
+        "invalid": "Invalid email format",
+        "max": "Email must not exceed 64 characters",
+        "required": "Email is required"
+      },
+      "password": {
+        "min": "Password must contain at least 8 characters",
+        "max": "Password must not exceed 100 characters",
+        "required": "Password is required"
+      }
+    },
+    "form": {
+      "title": "Login",
+      "email": "Email",
+      "emailPlaceholder": "Your email",
+      "password": "Password",
+      "button": "Sign In"
+    },
+    "toastBadLogin": "Incorrect login or password",
+    "textBottom": "Don't have an account?",
+    "linkBottom": "Register"
   },
 
   "pricesHero": {
@@ -124,6 +149,7 @@
       "price": ["Cost", "17$ /m2"]
     }
   },
+
   "footer": {
     "textBottom": "Yevheniia Pyshniuk. All rights reserved."
   },

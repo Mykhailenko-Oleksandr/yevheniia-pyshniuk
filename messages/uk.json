@@ -5,6 +5,7 @@
       "description": "Опис"
     }
   },
+
   "ariaLabel": {
     "menuBtn": "Відкрити меню",
     "logotype": "Логотип",
@@ -15,14 +16,17 @@
     "instagram": "Відкрити профіль в Instagram",
     "languageBtn": "Перемкнути мову на англійську"
   },
+
   "navigation": {
     "prices": "Ціни",
     "projects": "Проєкти"
   },
+
   "authButtons": {
     "register": "Зареєструватися",
     "login": "Увійти"
   },
+
   "registerPage": {
     "validation": {
       "firstName": {
@@ -67,10 +71,36 @@
     "linkBottom": "Вхід"
   },
 
+  "loginPage": {
+    "validation": {
+      "email": {
+        "invalid": "Неправильний формат електронної пошти",
+        "max": "Електронна пошта повинна містити не більше 64 символів",
+        "required": "Електронна пошта є обов’язковою"
+      },
+      "password": {
+        "min": "Пароль повинний містити щонайменше 8 символів",
+        "max": "Пароль повинний містити не більше 100 символів",
+        "required": "Пароль є обов’язковим"
+      }
+    },
+    "form": {
+      "title": "Вхід",
+      "email": "Пошта",
+      "emailPlaceholder": "Ваша пошта",
+      "password": "Пароль",
+      "button": "Увійти"
+    },
+    "toastBadLogin": "Невірний логін або пароль",
+    "textBottom": "Не маєте аккаунту?",
+    "linkBottom": "Реєстрація"
+  },
+
   "pricesHero": {
     "titleTop": "Ціни на ",
     "titleBottom": "послуги"
   },
+
   "pricesPlans": {
     "basic": {
       "image": "",
@@ -119,9 +149,11 @@
       "price": ["Вартість", "17$ /м2"]
     }
   },
+
   "footer": {
     "textBottom": "Євгенія Пишнюк. Всі права захищені."
   },
+
   "HomePage": {
     "title": "Привіт світ!"
   }
