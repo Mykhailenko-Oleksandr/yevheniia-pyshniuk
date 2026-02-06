@@ -108,6 +108,10 @@
     "cancelBtn": "Stay"
   },
 
+  "homePage": {
+    "title": "Hello world!"
+  },
+
   "pricesHero": {
     "titleTop": "Service ",
     "titleBottom": "prices"
@@ -164,9 +168,5 @@
 
   "footer": {
     "textBottom": "Yevheniia Pyshniuk. All rights reserved."
-  },
-
-  "HomePage": {
-    "title": "Hello world!"
   }
 }

@@ -1,3 +1,4 @@
+import { Feedback } from "@/types/feedback";
 import { nextServer } from "./api";
 import { User } from "@/types/user";
 
@@ -16,6 +17,16 @@ interface LoginRequest {
 export interface CheckSessionRequest {
   success: boolean;
 }
+
+export interface FeedbacksResponse {
+  page: number;
+  perPage: number;
+  totalFeedbacks: number;
+  totalPages: number;
+  feedbacks: Feedback[];
+}
+
+// Auth
 
 export async function register(data: RegisterRequest) {
   const res = await nextServer.post<User>("/auth/register", data);
@@ -36,7 +47,20 @@ export async function checkSession() {
   return res.data;
 }
 
+// Users
 export async function getMe() {
   const res = await nextServer.get<User>("/users/me");
   return res.data;
+}
+
+// Feedbacks
+export async function getFeedbacks(page?: number, perPage?: number) {
+  const res = await nextServer.get<FeedbacksResponse>("/feedbacks", {
+    params: {
+      page,
+      perPage,
+    },
+  });
+
+  return res.data.feedbacks;
 }

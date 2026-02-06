@@ -108,6 +108,10 @@
     "cancelBtn": "Залишитися"
   },
 
+  "homePage": {
+    "title": "Привіт світ!"
+  },
+
   "pricesHero": {
     "titleTop": "Ціни на ",
     "titleBottom": "послуги"
@@ -164,9 +168,5 @@
 
   "footer": {
     "textBottom": "Євгенія Пишнюк. Всі права захищені."
-  },
-
-  "HomePage": {
-    "title": "Привіт світ!"
   }
 }
