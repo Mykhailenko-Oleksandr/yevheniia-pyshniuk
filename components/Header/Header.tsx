@@ -12,11 +12,12 @@ import AuthButtons from "../AuthButtons/AuthButtons";
 import { useAuthStore } from "@/lib/store/authStore";
 import UserHeader from "../UserHeader/UserHeader";
 import Modal from "../Modal/Modal";
+import { logout } from "@/lib/api/clientApi";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { user, isAuthenticated } = useAuthStore();
+  const { user, isAuthenticated, clearIsAuthenticated } = useAuthStore();
 
   const t = useTranslations("ariaLabel");
 
@@ -38,8 +39,11 @@ export default function Header() {
     setIsMenuOpen(false);
   }
 
-  async function logout() {
-    console.log("ok");
+  async function handlerLogout() {
+    await logout();
+    clearIsAuthenticated();
+    setIsModalOpen(false);
+    closeMenu();
   }
 
   return (
@@ -90,7 +94,7 @@ export default function Header() {
         <Modal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
-          onConfirm={logout}
+          onConfirm={handlerLogout}
         />
       )}
     </>
