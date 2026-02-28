@@ -120,7 +120,8 @@
     "loadingText": "Завантаження відгуків",
     "errorText": "Помилка завантаження відгуків",
     "zeroFeedbacks": "Поки немає відгуків",
-    "btnAddFeedback": "Залишити відгук"
+    "btnAddFeedback": "Залишити відгук",
+    "retryBtn": "Повторити"
   },
 
   "feedbackFormModal": {

@@ -45,7 +45,8 @@
   }
 }
 
-.swiper {
+.iconBtnPrev {
+  transform: rotate(180deg);
 }
 
 .swiperSlideBox {

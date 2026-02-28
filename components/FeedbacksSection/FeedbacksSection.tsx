@@ -3,7 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 import css from "./FeedbacksSection.module.css";
 import { getFeedbacks } from "@/lib/api/clientApi";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import FeedbackFormModal from "../FeedbackFormModal/FeedbackFormModal";
 import FeedbacksSwiper from "../FeedbackSwiper/FeedbacksSwiper";
 import Button from "../Button/Button";
@@ -17,12 +17,14 @@ export default function FeedbacksSection() {
     data: feedbacks,
     isLoading,
     error,
+    refetch,
   } = useQuery({
     queryKey: ["feedbacks"],
     queryFn: () => getFeedbacks(),
+    staleTime: 5 * 60 * 1000,
   });
 
-  const visibleFeedbacks = useMemo(() => feedbacks ?? [], [feedbacks]);
+  const visibleFeedbacks = feedbacks ?? [];
 
   return (
     <>
@@ -33,9 +35,16 @@ export default function FeedbacksSection() {
           {isLoading && <p className={css.statusText}>{t("loadingText")}...</p>}
 
           {error && (
-            <p className={css.statusText} role="status">
-              {t("errorText")}
-            </p>
+            <>
+              <p className={css.statusText} role="status">
+                {t("errorText")}
+              </p>
+              <Button
+                type="button"
+                text={t("retryBtn")}
+                onClick={() => refetch()}
+              />
+            </>
           )}
 
           {!isLoading && !error && visibleFeedbacks.length === 0 && (

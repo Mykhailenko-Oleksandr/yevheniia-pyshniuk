@@ -27,8 +27,13 @@ export default function FeedbacksSwiper({ feedbacks }: FeedbacksSwiperProps) {
           aria-label={tAria("feedbacksPrev")}
           type="button"
         >
-          <svg width="24" height="24" aria-hidden="true">
-            <use href="/icons.svg#arrow-back" />
+          <svg
+            width="24"
+            height="24"
+            aria-hidden="true"
+            className={css.iconBtnPrev}
+          >
+            <use href="/icons.svg#arrow" />
           </svg>
         </button>
         <Swiper
@@ -68,7 +73,7 @@ export default function FeedbacksSwiper({ feedbacks }: FeedbacksSwiperProps) {
           type="button"
         >
           <svg width="24" height="24" aria-hidden="true">
-            <use href="/icons.svg#arrow-forward" />
+            <use href="/icons.svg#arrow" />
           </svg>
         </button>
       </div>

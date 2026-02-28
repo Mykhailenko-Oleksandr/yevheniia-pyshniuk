@@ -120,7 +120,8 @@
     "loadingText": "Loading reviews",
     "errorText": "Error loading reviews",
     "zeroFeedbacks": "No reviews yet",
-    "btnAddFeedback": "Leave a review"
+    "btnAddFeedback": "Leave a review",
+    "retryBtn": "Retry"
   },
 
   "feedbackFormModal": {
