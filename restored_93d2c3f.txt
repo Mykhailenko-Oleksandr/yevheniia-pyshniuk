@@ -16,10 +16,7 @@
     "instagram": "Відкрити профіль в Instagram",
     "languageBtn": "Перемкнути мову на англійську",
     "logoutBtn": "Вийти з облікового запису",
-    "closeModalBtn": "Закрити модальне вікно",
-    "feedbacksPrev": "Попередній відгук",
-    "feedbacksNext": "Наступний відгук",
-    "feedbacksPagination": "Пагінація відгуків"
+    "closeModalBtn": "Закрити модальне вікно"
   },
 
   "navigation": {
@@ -115,19 +112,11 @@
     "title": "Привіт світ!"
   },
 
-  "feedbacksSection": {
-    "title": "Останні відгуки",
-    "loadingText": "Завантаження відгуків",
-    "errorText": "Помилка завантаження відгуків",
-    "zeroFeedbacks": "Поки немає відгуків",
-    "btnAddFeedback": "Залишити відгук"
-  },
-
   "feedbackFormModal": {
     "validation": {
       "userName": {
         "min": "Ім’я повинно містити щонайменше 3 символи",
-        "max": "Ім’я повинно містити не більше 20 символів",
+        "max": "Ім’я повинно містити не більше 30 символів",
         "required": "Ім’я є обов’язковим"
       },
       "comment": {

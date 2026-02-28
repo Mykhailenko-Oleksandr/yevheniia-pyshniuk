@@ -26,6 +26,12 @@ export interface FeedbacksResponse {
   feedbacks: Feedback[];
 }
 
+export interface CreateFeedbackData {
+  userName: string;
+  comment: string;
+  rating: number;
+}
+
 // Auth
 
 export async function register(data: RegisterRequest) {
@@ -63,4 +69,10 @@ export async function getFeedbacks(page?: number, perPage?: number) {
   });
 
   return res.data.feedbacks;
+}
+
+export async function createFeedback(body: CreateFeedbackData) {
+  const res = await nextServer.post<Feedback>("/feedbacks", body);
+
+  return res.data;
 }

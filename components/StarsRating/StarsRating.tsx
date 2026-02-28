@@ -15,9 +15,9 @@ const CustomStar = (
 
 const myStyles = {
   itemShapes: CustomStar,
-  itemStrokeWidth: 2,
+  itemStrokeWidth: 1,
 
-  activeFillColor: "var(--color-text)",
+  activeFillColor: "var(--color-stars)",
   activeStrokeColor: "var(--color-text)",
 
   inactiveFillColor: "transparent",

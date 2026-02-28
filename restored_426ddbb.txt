@@ -1,0 +1,31 @@
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 30px;
+}
+
+.fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  margin: 0 auto;
+}
+
+.formText {
+  display: flex;
+  align-items: center;
+}

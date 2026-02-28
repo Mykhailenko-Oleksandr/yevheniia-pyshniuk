@@ -1,0 +1,124 @@
+.swiperBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  margin-bottom: 5px;
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 37px;
+  height: 37px;
+
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-text);
+
+  transition: background-color 300ms ease;
+
+  & svg {
+    fill: var(--color-icon);
+  }
+
+  &.menuLink {
+    width: 40px;
+    height: 40px;
+
+    & svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-button-hover);
+  }
+
+  &:active {
+    background-color: var(--color-text);
+  }
+}
+
+.swiper {
+}
+
+.swiperSlideBox {
+  padding: 10px 10px;
+
+  border-radius: 20px;
+  background-color: #eae1eb;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 240px;
+}
+
+.userName {
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.comment {
+  word-wrap: break-word;
+  text-align: justify;
+}
+
+.pagination {
+  margin: 0 auto;
+  line-height: 0;
+
+  margin-bottom: 15px;
+}
+
+:global(
+  :is(
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-horizontal.swiper-pagination-bullets
+  ).swiper-pagination-bullets-dynamic
+) {
+  transform: translateX(0);
+}
+
+:global(.swiper-pagination-bullet-active) {
+  background-color: var(--color-text);
+}
+
+@media only screen and (min-width: 480px) {
+  .swiperBox {
+    gap: 10px;
+
+    margin-bottom: 10px;
+  }
+
+  .swiperSlideBox {
+    min-height: unset;
+    height: 144px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .swiperBox {
+    gap: 14px;
+  }
+
+  .swiperSlideBox {
+    height: 168px;
+  }
+
+  .userName {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (min-width: 1440px) {
+}

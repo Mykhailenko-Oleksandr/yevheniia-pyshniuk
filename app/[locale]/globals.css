@@ -11,6 +11,7 @@
   --color-dark-olive: #4b5320;
   --color-accent-burgundy: #481e28;
   --color-neutral-stone: #d5cfbf;
+  --color-yellow: #ffd700;
 
   --color-text: var(--color-accent-burgundy);
   --color-background: var(--color-off-white);
@@ -19,6 +20,7 @@
   --color-button: var(--color-accent-burgundy);
   --color-button-hover: var(--color-dark-olive);
   --color-icon: var(--color-white);
+  --color-stars: var(--color-yellow);
 }
 
 /* =====================================

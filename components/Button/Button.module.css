@@ -1,0 +1,33 @@
+.btn {
+  display: block;
+  min-width: 180px;
+
+  outline: none;
+  border: 2px solid var(--color-text);
+  border-radius: 12px;
+
+  padding: 7px 14px;
+  text-align: center;
+  font-size: 17px;
+
+  transition:
+    border-color 300ms ease,
+    color 300ms ease,
+    background-color 300ms ease;
+
+  color: var(--color-background);
+  background-color: var(--color-text);
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-button-hover);
+    color: var(--color-button-hover);
+    background-color: var(--color-background);
+  }
+
+  &:active {
+    border-color: var(--color-text);
+    color: var(--color-background);
+    background-color: var(--color-text);
+  }
+}

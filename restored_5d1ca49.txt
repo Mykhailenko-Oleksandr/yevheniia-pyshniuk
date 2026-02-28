@@ -16,10 +16,7 @@
     "instagram": "Open the Instagram profile",
     "languageBtn": "Switch language to Ukrainian",
     "logoutBtn": "Log out of account",
-    "closeModalBtn": "Close modal window",
-    "feedbacksPrev": "Previous feedback",
-    "feedbacksNext": "Next feedback",
-    "feedbacksPagination": "Feedback pagination"
+    "closeModalBtn": "Close modal window"
   },
 
   "navigation": {
@@ -115,19 +112,11 @@
     "title": "Hello world!"
   },
 
-  "feedbacksSection": {
-    "title": "Latest Reviews",
-    "loadingText": "Loading reviews",
-    "errorText": "Error loading reviews",
-    "zeroFeedbacks": "No reviews yet",
-    "btnAddFeedback": "Leave a review"
-  },
-
   "feedbackFormModal": {
     "validation": {
       "userName": {
         "min": "Name must be at least 3 characters long",
-        "max": "Name must not exceed 20 characters",
+        "max": "Name must not exceed 30 characters",
         "required": "Name is required"
       },
       "comment": {
