@@ -3,6 +3,10 @@
     "home": {
       "title": "Yevheniia Pyshniuk",
       "description": "Description"
+    },
+    "profile": {
+      "titleDefault": "Profile",
+      "description": ["User profile", "on the platform Yevheniia Pyshniuk"]
     }
   },
 

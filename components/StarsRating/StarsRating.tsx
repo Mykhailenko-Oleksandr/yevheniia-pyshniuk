@@ -18,10 +18,10 @@ const myStyles = {
   itemStrokeWidth: 1,
 
   activeFillColor: "var(--color-stars)",
-  activeStrokeColor: "var(--color-text)",
+  activeStrokeColor: "var(--color-accent-burgundy)",
 
   inactiveFillColor: "transparent",
-  inactiveStrokeColor: "var(--color-text)",
+  inactiveStrokeColor: "var(--color-accent-burgundy)",
 };
 
 export default function StarsRating({ rating, onChange }: PropsRating) {

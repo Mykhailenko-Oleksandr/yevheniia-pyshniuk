@@ -76,7 +76,12 @@ export default function BurgerMenu({
         <ToggleButtons isMenu={isOpen} />
 
         {user && isAuthenticated ? (
-          <UserHeader isMenu={isOpen} user={user} openModal={openModal} />
+          <UserHeader
+            isMenu={isOpen}
+            user={user}
+            openModal={openModal}
+            closeMenu={closeMenu}
+          />
         ) : (
           <AuthButtons isMenu={isOpen} closeMenu={closeMenu} />
         )}

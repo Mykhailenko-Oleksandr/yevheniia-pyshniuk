@@ -64,11 +64,13 @@
 .userName {
   font-size: 18px;
   word-wrap: break-word;
+  color: var(--color-accent-burgundy);
 }
 
 .comment {
   word-wrap: break-word;
   text-align: justify;
+  color: var(--color-accent-burgundy);
 }
 
 .pagination {

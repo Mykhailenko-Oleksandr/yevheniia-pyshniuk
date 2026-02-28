@@ -10,12 +10,14 @@ import { useTranslations } from "next-intl";
 interface UserHeaderProps {
   user: User;
   openModal: () => void;
+  closeMenu: () => void;
   isMenu?: boolean;
 }
 
 export default function UserHeader({
   user,
   openModal,
+  closeMenu,
   isMenu,
 }: UserHeaderProps) {
   const tAriaLabel = useTranslations("ariaLabel");
@@ -23,7 +25,7 @@ export default function UserHeader({
 
   return (
     <>
-      <div className={css.box}>
+      <div className={css.box} onClick={closeMenu}>
         <Link href="/profile" className={css.link}>
           <Image
             src={user.avatar}
